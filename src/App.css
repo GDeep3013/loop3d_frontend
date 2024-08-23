@@ -1,0 +1,7 @@
+.building-peak .slick-slider .slick-list { margin: 0 -36px; }
+.building-peak .slick-slider .slick-list .slick-slide{ padding: 0 36px; }
+
+.slick-slider button.slick-arrow::before{content: none; }
+.slick-slider button.slick-arrow{ width: 60px; height: 60px; }
+.slick-slider button.slick-arrow.slick-prev{ left: 50px; background: url('../images/arrow-prev.svg') no-repeat; }
+.slick-slider button.slick-arrow.slick-next{ right: 50px; background: url('../images/arrow-next.svg') no-repeat; }
