@@ -4,16 +4,30 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function PartnerSlider() {
-  var settings = {
+  const settings = {
     dots: false,
-    arrows:false,
+    arrows: false,
     infinite: true,
     autoplay: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          arrows: false,
+        }
+      }
+    ]
   };
-
   return (
     <Slider {...settings}>
       <div className="building-logo-box pt-[20px] pb-[20px]">

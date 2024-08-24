@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link , useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Container from "../common/Container";
 
 const Header: React.FC = () => {
 
-  const location  = useLocation();
+  const location = useLocation();
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -45,8 +45,8 @@ const Header: React.FC = () => {
   };
 
   const bgColor = (location.pathname === '/start-survey' || location.pathname === '/terms-of-service' || location.pathname === '/lead-dashboard' || location.pathname === '/feedback-survey')
-  ? 'bg-custom-color'
-  : 'bg-[transparent]';
+    ? 'bg-custom-color max-[767px]:bg-white'
+    : 'bg-[transparent] max-[767px]:bg-white';
 
   return (
     <div>
@@ -54,9 +54,8 @@ const Header: React.FC = () => {
       <div className="bg-[#7ABCDB]">
         <Container className="">
           <div
-            className={` flex justify-between items-center py-4 transition-transform duration-300 ease-in-out ${
-              topbarVisible ? "translate-y-0" : "-translate-y-full"
-            }`}
+            className={` flex justify-between items-center py-4 transition-transform duration-300 ease-in-out ${topbarVisible ? "translate-y-0" : "-translate-y-full"
+              }`}
           >
             <div className="flex space-x-4">
               {/* Social Icons (replace with your SVGs or FontAwesome Icons) */}
@@ -93,59 +92,70 @@ const Header: React.FC = () => {
       </div>
       {/* Header */}
       <div
-        className={`absolute left-0 right-0 transition-all duration-300 ease-in-out z-10 ${
-          isScrolled
+        className={`absolute left-0 group right-0 transition-all duration-300 ease-in-out z-10 hover:bg-white hover:text-custom-color ${isScrolled
             ? "bg-white text-gray-900 shadow-md !fixed w-full top-0"
-            : ` ${bgColor} text-white`
-        }`}
+            : `${bgColor} text-white`
+          }`}
       >
         <Container className="">
           <div className="flex justify-between items-center py-[12px]">
-              {/* Logo */}
-              {!isScrolled ?
+            {/* Logo */}
+            {!isScrolled ? (
               <Link to="/home">
-              <img
-                className="h-[50px] md:h-[77px]"
-                src='/images/header/logoheader.svg'
-                alt="Logo"
-              />
+                <img
+                  className="h-[30px] max-[767px]:hidden group-hover:hidden"
+                  src="/images/header/loop3d-logo.webp"
+                  alt="Logo"
+                  style={{
+                    filter: 'brightness(0) invert(1)',
+                  }}
+                />
+                <img
+                  className="h-[30px] md:hidden group-hover:inline-block"
+                  src="/images/header/loop3d-logo.webp"
+                  alt="Logo"
+                />
               </Link>
-              :
+            ) : (
               <Link to="/home">
-              <img
-                className="h-[36px]"
-                src='/images/header/loop3d-logo.webp'
-                alt="Logo"
-              />
+                <img
+                  className="h-[36px]"
+                  src="/images/header/loop3d-logo.webp"
+                  alt="Logo"
+                />
               </Link>
-}
+            )}
+
             {/* Nav links */}
             <nav
-              className={`${
-                menuOpen ? "block" : "hidden"
-              } lg:flex space-x-8 absolute lg:relative top-full lg:top-0 left-0 w-full lg:w-auto bg-white lg:bg-transparent`}
+              className={`${menuOpen ? "block" : "hidden"
+                } lg:flex space-x-8 absolute lg:relative top-full lg:top-0 left-0 w-full lg:w-auto bg-white lg:bg-transparent max-[991px]:py-[20px]`}
             >
               <Link
                 to="/home"
-                className={`relative block-inline mx-4 py-2 lg:py-0 text-[16px] font-poppins text-black lg:text-white after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-[#7ABCDB] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 after:ease-[cubic-bezier(.58,.3,.005,1)] hover:text-[#7ABCDB] hover:after:scale-x-100 ${isScrolled ? '!text-custom-color' : 'text-white' } `}
+                className={`relative inline-block mx-4 py-2 lg:py-0 text-[16px] font-poppins ${isScrolled ? "text-custom-color" : "text-white"
+                  } hover:text-custom-color group-hover:text-custom-color after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-[#7ABCDB] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 after:ease-[cubic-bezier(.58,.3,.005,1)] hover:after:scale-x-100 max-[991px]:w-full max-[991px]:ml-[32px]`}
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                className={`relative block-inline mx-4 py-2 lg:py-0 text-[16px] font-poppins text-black lg:text-white after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-[#7ABCDB] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 after:ease-[cubic-bezier(.58,.3,.005,1)] hover:text-[#7ABCDB] hover:after:scale-x-100 ${isScrolled ? '!text-custom-color' : 'text-white' } `}
+                className={`relative inline-block mx-4 py-2 lg:py-0 text-[16px] font-poppins ${isScrolled ? "text-custom-color" : "text-white"
+                  } hover:text-custom-color group-hover:text-custom-color after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-[#7ABCDB] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 after:ease-[cubic-bezier(.58,.3,.005,1)] hover:after:scale-x-100 max-[991px]:w-full`}
               >
                 About Us
               </Link>
               <Link
                 to="/services"
-                className={`relative block-inline mx-4 py-2 lg:py-0 text-[16px] font-poppins text-black lg:text-white after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-[#7ABCDB] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 after:ease-[cubic-bezier(.58,.3,.005,1)] hover:text-[#7ABCDB] hover:after:scale-x-100 ${isScrolled ? '!text-custom-color' : 'text-white'} `}
+                className={`relative inline-block mx-4 py-2 lg:py-0 text-[16px] font-poppins ${isScrolled ? "text-custom-color" : "text-white"
+                  } hover:text-custom-color group-hover:text-custom-color after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-[#7ABCDB] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 after:ease-[cubic-bezier(.58,.3,.005,1)] hover:after:scale-x-100 max-[991px]:w-full`}
               >
                 Services
               </Link>
               <Link
                 to="/contact"
-                className={`relative block-inline mx-4 py-2 lg:py-0 text-[16px] font-poppins text-black lg:text-white after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-[#7ABCDB] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 after:ease-[cubic-bezier(.58,.3,.005,1)] hover:text-[#7ABCDB] hover:after:scale-x-100 ${isScrolled ? '!text-custom-color' : 'text-white'} `}
+                className={`relative inline-block mx-4 py-2 lg:py-0 text-[16px] font-poppins ${isScrolled ? "text-custom-color" : "text-white"
+                  } hover:text-custom-color group-hover:text-custom-color after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-[#7ABCDB] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 after:ease-[cubic-bezier(.58,.3,.005,1)] hover:after:scale-x-100 max-[991px]:w-full`}
               >
                 Contact Us
               </Link>
@@ -183,7 +193,7 @@ const Header: React.FC = () => {
               </button>
               {/* Request a Demo button hidden on mobile */}
               <div className="hidden sm:block">
-                <button className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[250px] min-h-[56px] leading-[56px] inline-block text-center rounded-[50px] font-poppins">
+                <button className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[250px] max-[767px]:min-w-[200px] min-h-[56px] max-[767px]:min-h-[46px] leading-[56px] max-[767px]:leading-[46px] inline-block text-center rounded-[50px] font-poppins">
                   Request a Demo
                 </button>
               </div>
@@ -191,6 +201,7 @@ const Header: React.FC = () => {
           </div>
         </Container>
       </div>
+
     </div>
   );
 };

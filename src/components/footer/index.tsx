@@ -37,10 +37,10 @@ const Footer: React.FC = () => {
     animateValue(0, 8, 5000, setEmployeeRetention); // +8% in 2 seconds
   }, []);
 
-  const bgColor = (location.pathname == '/start-survey') ? 'bg-custom-color' : 'bg-[transparent]';
+
   const marginTop = (location.pathname == '/start-survey') ? 'mt-[38rem] md:mt-[41rem] lg:mt-[23rem]' : 'mt-[200px]';
   const disbleContent = (location.pathname == '/services') ? 'hidden' : '';
-  const marginBox = (location.pathname == '/about' || location.pathname === '/home' ) ? 'mt-[0]' : '';
+  const marginBox = (location.pathname == '/about' || location.pathname === '/home' ) ? '!mt-[0]' : '';
 
   return (
     <footer className="bg-[#174A6D] text-white font-poppins">
@@ -217,7 +217,7 @@ const Footer: React.FC = () => {
             <div className="lg:flex gap-2 mt-4 lg:mt-10">
               <InputField
                 labelClass="text-white"
-                className="rounded-full px-8 placeholder-[#C3C3C3] mx-auto !w-[280px] lg:!w-[240px]"
+                className="rounded-full px-8 placeholder-[#C3C3C3] mx-auto !w-[280px] lg:!w-[230px]"
                 label=""
                 type="email"
                 name="email"

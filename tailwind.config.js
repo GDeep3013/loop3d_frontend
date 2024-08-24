@@ -18,6 +18,7 @@ export default {
       },
       boxShadow: {
         'custom': '-50px 50px 0px 0px #264653',
+        'custom-mobile': '-30px 30px 0px 0px #264653',
         'custom2': '0px 0px 20px 0px rgba(0,0,0,0.5)',
         'custom3': '0px 0px 20px 0px rgba(0, 0, 0, 0.1)',
       },

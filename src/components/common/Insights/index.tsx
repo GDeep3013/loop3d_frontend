@@ -34,7 +34,7 @@ const Insights: React.FC = () => {
             <h3 className="text-[34px] md:text-[48px] font-frank mb-2 text-center text-white">
               Real Insights Mean Real Results
             </h3>
-            <div className="flex flex-col lg:flex-row w-full justify-center xl:justify-around space-y-8 xl:space-x-8">
+            <div className="flex flex-col lg:flex-row w-full justify-center xl:justify-around">
               <div className="flex flex-col justify-center items-center">
                 <span className="text-[34px] md:text-[48px] font-frank text-white">
                   {feedbackSessions.toLocaleString()}k
