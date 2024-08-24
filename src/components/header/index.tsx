@@ -161,7 +161,7 @@ const Header: React.FC = () => {
               </Link>
             </nav>
 
-            <div className="flex gap-4">
+            <div className="flex gap-4 items-center">
               {/* Mobile menu button */}
               <button
                 className="flex justify-center items-center w-[39px] h-[39px] lg:hidden text-white focus:outline-none bg-[#7ABCDB] p-1 rounded-[3px]"

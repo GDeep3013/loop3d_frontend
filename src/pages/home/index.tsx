@@ -38,57 +38,69 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <div className="hero-banner bg-[url('/images/banner-bg.webp')] bg-repeat lg:h-lvh flex items-center max-[767px]:bg-right max-[767px]:pt-[60px] max-[1024px]:pt-[120px] max-[1024px]:pb-[60px] relative">
-        <div className="absolute inset-0 bg-black opacity-30 md:hidden"></div>
-        <Container className="relative z-[1]">
-          <div className="xl:flex items-center">
-            <div className="xl:w-1/2 w-full">
-              <div className="banner-text max-[1024px]:pt-[48px]">
-                <h1 className="text-4xl xl:text-7xl text-white font-frank xl:leading-[90px] leading-[45px] max-[1024px]:text-center max-[1024px]:max-w-[405px] max-[1024px]:m-auto">Revolutionize Your 360 Feedback Process with AI</h1>
-                <div className="banner-buttons max-[1024px]:flex max-[767px]:flex-wrap max-[767px]:gap-x-5 max-[1024px]:justify-center mt-[76px] max-[1024px]:mt-7 max-[767px]:text-center">
-                  <a href="javascript:;" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[250px] min-h-[56px] leading-[56px] inline-block text-center rounded-[50px] font-poppins ml-5 max-[767px]:ml-0 max-[767px]:min-w-[212px] max-[767px]:mt-7">Request a Demo</a>
-                  <a href="javascript:;" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[250px] min-h-[56px] leading-[56px] inline-block text-center rounded-[50px] font-poppins ml-5 max-[767px]:ml-0 max-[767px]:min-w-[212px] max-[767px]:mt-7">Learn More</a>
-                </div>
-              </div>
-            </div>
-            <div className="xl:w-1/2 w-full text-right max-[1024px]:text-center">
-              <div className="banner-video max-[1024px]:mt-8">
-                <div className="video-outer relative max-w-[640px] max-[1024px]:m-auto">
-                  <video
-                     id="banner-video"
-                     ref={videoRef}
-                    className="object-cover"
-                    loop
-                    muted
-                    playsInline
-                    controls={false}>
-                    <source src="https://loop3d.ai/wp-content/uploads/2024/08/Looped-Homepage-Video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  <Link
-                    to="#"
-                    className="absolute top-1/2 left-1/2 translate-y-[-50%] translate-x-[-50%] cursor-pointer video-control-icon"
-                    onClick={handleVideoControl}
-                    ref={buttonRef}
-                  >
-                    <svg
-                      aria-hidden="true"
-                      className="w-[77px] max-[767px]:w-[50px]"
-                      fill="#174a6d"
-                      opacity="0.8"
-                      viewBox="0 0 512 512"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"></path>
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
+      <div className="hero-banner bg-[url('/images/banner-bg.webp')] bg-repeat lg:h-[calc(100vh-56px)] flex items-center bg-center bg-cover relative">
+  <div className="absolute inset-0 bg-black opacity-30 md:hidden"></div>
+  <Container className="relative z-[1] px-4 py-8 lg:py-16">
+    <div className="xl:flex items-center">
+      <div className="xl:w-1/2 w-full">
+        <div className="banner-text max-w-[90%] mx-auto xl:mx-0 xl:pt-0 pt-12">
+          <h1 className="text-4xl xl:text-5xl 2xl:text-7xl text-white font-frank xl:leading-[90px] leading-[45px] text-center xl:text-left xl:max-w-none max-w-[405px] mx-auto xl:mx-0">
+            Revolutionize Your 360 Feedback Process with AI
+          </h1>
+          <div className="banner-buttons mt-8 flex flex-col gap-4 items-center xl:flex-row xl:gap-8 xl:justify-start xl:mt-12">
+            <a
+              href="javascript:;"
+              className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[212px] h-[56px] flex items-center justify-center leading-[56px] rounded-full font-poppins"
+            >
+              Request a Demo
+            </a>
+            <a
+              href="javascript:;"
+              className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[212px] h-[56px] flex items-center justify-center leading-[56px] rounded-full font-poppins"
+            >
+              Learn More
+            </a>
           </div>
-        </Container >
-      </div >
+        </div>
+      </div>
+      <div className="xl:w-1/2 w-full text-center xl:text-right mt-8 xl:mt-0">
+        <div className="banner-video max-w-[640px] mx-auto xl:mx-0">
+          <div className="video-outer relative">
+            <video
+              id="banner-video"
+              ref={videoRef}
+              className="object-cover w-full h-auto max-w-[640px]"
+              loop
+              muted
+              playsInline
+              controls={false}
+            >
+              <source src="https://loop3d.ai/wp-content/uploads/2024/08/Looped-Homepage-Video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <Link
+              to="#"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer video-control-icon"
+              onClick={handleVideoControl}
+              ref={buttonRef}
+            >
+              <svg
+                aria-hidden="true"
+                className="w-[77px] max-w-[50px] text-[#174a6d] opacity-80"
+                fill="currentColor"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"></path>
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</div>
+
 
       <div className="building-peak py-12 min-[1025px]:py-[80px] bg-[#f5f5f5] max-[1024px]:overflow-hidden">
         <Container>
@@ -106,7 +118,7 @@ const Home: React.FC = () => {
         <Container>
           <div className="feedback-heading text-center">
             <h2 className="text-black text-3xl min-[1025px]:text-[48px] font-frank">Steps For Feedback Process with AI</h2>
-            <p className="text-base leading-[26px] text-black max-w-[813px] font-poppins m-auto max-[1024px]:mt-3">LOOP3D 360 Feedback was designed by doctoral degrees professionals in Organizational Psychology with extensive experience working with Fortune 100 companies. LOOP3D was developed to enhance performance and people development through simplified, relevant, and smart feedback loops, all powered through artificial intelligence.</p>
+            <p className="text-base leading-[26px] text-black max-w-[813px] font-poppins m-auto mt-3">LOOP3D 360 Feedback was designed by doctoral degrees professionals in Organizational Psychology with extensive experience working with Fortune 100 companies. LOOP3D was developed to enhance performance and people development through simplified, relevant, and smart feedback loops, all powered through artificial intelligence.</p>
           </div>
           <div className="feedback-list mt-12">
             <div className="md:flex gap-x-7">
@@ -149,73 +161,78 @@ const Home: React.FC = () => {
       </div>
 
 
-      <div className="how-works bg-[#f5f5f5] pt-12 md:pt-[80px] pb-[280px] max-[767px]:pb-[480px] max-[1023px]:pb-[620px]">
-        <Container>
-          <div className="xl:flex">
-            <div className="w-full xl:w-1/2 min-[1025px]:pr-[35px] max-[1024px]:text-center">
-              <h2 className="text-black text-3xl xl:text-[48px] font-frank">How It Works</h2>
-              <p className="text-base leading-[26px] text-black font-poppins xl:mt-5 mt-3 max-[1024px]:max-w-[600px] max-[1024px]:m-auto">Our process is designed to be flexible and adaptable to your needs, providing personalized feedback and insights to help you achieve your organizational goals.</p>
-              <div className="work-img pt-[30px] pl-[50px] max-[1024px]:text-center">
-                <img className="border-solid border-white border-[9px] rounded-[30px] shadow-custom-mobile md:shadow-custom max-[1024px]:m-auto" src="/images/work.webp" alt="work image" />
-              </div>
-            </div>
-            <div className="w-full xl:w-1/2 md:pl-[30px] max-[1024px]:mt-[80px] max-[767px]:mt-[65px]">
-              <div className="work-listing group flex py-[19px] px-[25px] rounded-[15px] bg-white hover:bg-custom-color transition duration-300 ease-in-out shadow-custom2 mb-[26px] max-[767px]:items-center">
-                <div className="work-count pr-[35px]">
-                  <h3 className="text-4xl md:text-[50px] text-[#aabdca] group-hover:text-white font-frank">01</h3>
-                </div>
-                <div className="work-content">
-                  <h4 className="text-[19px] md:text-[25px] text-custom-color font-frank group-hover:text-white">Customize Your Survey</h4>
-                  <p className="text-sm md:text-base text-custom-color font-poppins group-hover:text-white max-[767px]:mt-1">Use our intuitive platform to create a survey tailored to your organization's needs.</p>
-                </div>
-              </div>
-              <div className="work-listing group flex py-[19px] px-[25px] rounded-[15px] bg-white hover:bg-custom-color transition duration-300 ease-in-out shadow-custom2 mb-[26px] max-[767px]:items-center">
-                <div className="work-count pr-[35px]">
-                  <h3 className="text-4xl md:text-[50px] text-[#aabdca] group-hover:text-white font-frank">02</h3>
-                </div>
-                <div className="work-content">
-                  <h4 className="text-[19px] md:text-[25px] text-custom-color font-frank group-hover:text-white">AI-Generated Questions</h4>
-                  <p className="text-sm md:text-base text-custom-color font-poppins group-hover:text-white max-[767px]:mt-1">Our AI analyzes your inputs and generates relevant, targeted questions.</p>
-                </div>
-              </div>
-              <div className="work-listing group flex py-[19px] px-[25px] rounded-[15px] bg-white hover:bg-custom-color transition duration-300 ease-in-out shadow-custom2 mb-[26px] max-[767px]:items-center">
-                <div className="work-count pr-[35px]">
-                  <h3 className="text-4xl md:text-[50px] text-[#aabdca] group-hover:text-white font-frank">03</h3>
-                </div>
-                <div className="work-content">
-                  <h4 className="text-[19px] md:text-[25px] text-custom-color font-frank group-hover:text-white">Collect Feedback</h4>
-                  <p className="text-sm md:text-base text-custom-color font-poppins group-hover:text-white max-[767px]:mt-1">Distribute the survey to your employees and collect their feedback easily and anonymously.</p>
-                </div>
-              </div>
-              <div className="work-listing group flex py-[19px] px-[25px] rounded-[15px] bg-white hover:bg-custom-color transition duration-300 ease-in-out shadow-custom2 mb-[26px] max-[767px]:items-center mb-[26px]">
-                <div className="work-count pr-[35px]">
-                  <h3 className="text-4xl md:text-[50px] text-[#aabdca] group-hover:text-white font-frank">04</h3>
-                </div>
-                <div className="work-content">
-                  <h4 className="text-[19px] md:text-[25px] text-custom-color font-frank group-hover:text-white">AI-Generated Reports</h4>
-                  <p className="text-sm md:text-base text-custom-color font-poppins group-hover:text-white">Receive detailed reports with actionable insights tailored to each employee.</p>
-                </div>
-              </div>
-              <div className="work-listing group flex py-[19px] px-[25px] rounded-[15px] bg-white hover:bg-custom-color transition duration-300 ease-in-out shadow-custom2 mb-[26px] max-[767px]:items-center">
-                <div className="work-count pr-[35px]">
-                  <h3 className="text-4xl md:text-[50px] text-[#aabdca] group-hover:text-white font-frank">05</h3>
-                </div>
-                <div className="work-content">
-                  <h4 className="text-[19px] md:text-[25px] text-custom-color font-frank group-hover:text-white">Continuous Improvement</h4>
-                  <p className="text-sm md:text-base text-custom-color font-poppins group-hover:text-white">Use the insights to drive continuous improvement and enhance employee performance.</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div className="banner-buttons mt-[50px] md:mt-[76px] md:flex justify-center max-[767px]:text-center">
-            <a href="javascript:;" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[250px] max-[767px]:min-w-[212px] min-h-[56px] max-[767px]:min-h-[46px] leading-[56px] max-[767px]:leading-[46px] inline-block text-center rounded-[50px] font-poppins">Request a Demo</a>
-            <a href="javascript:;" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[250px] max-[767px]:min-w-[212px] min-h-[56px] max-[767px]:min-h-[46px] leading-[56px] max-[767px]:leading-[46px] inline-block text-center rounded-[50px] font-poppins md:ml-5  md:mt-0 mt-5">Learn More</a>
-          </div>
-
-        </Container>
+<div className="how-works bg-[#f5f5f5] pt-12 md:pt-20 pb-[29rem] md:pb-[37rem] lg:pb-[16rem]">
+  <Container>
+    <div className="xl:flex xl:space-x-8">
+      <div className="w-full xl:w-1/2 xl:pr-8 text-center xl:text-left">
+        <h2 className="text-black text-3xl md:text-4xl xl:text-5xl font-frank mb-4">How It Works</h2>
+        <p className="text-base md:text-lg xl:text-xl leading-relaxed text-black font-poppins mb-8 max-w-full sm:max-w-lg md:max-w-xl mx-auto xl:mx-0">
+          Our process is designed to be flexible and adaptable to your needs, providing personalized feedback and insights to help you achieve your organizational goals.
+        </p>
+        <div className="work-img mb-8">
+          <img
+            className="border-solid border-white border-[9px] rounded-[30px] shadow-custom-mobile xl:shadow-custom max-w-full mx-auto max-w-[500px] lg:max-w-auto"
+            src="/images/work.webp"
+            alt="work image"
+          />
+        </div>
       </div>
+      <div className="w-full xl:w-1/2 space-y-6 xl:space-y-8 mt-[6rem] xl:mt-0">
+        <div className="work-listing group flex flex-col md:flex-row py-5 px-6 rounded-[15px] bg-white hover:bg-custom-color transition duration-300 ease-in-out shadow-custom2 mb-6 max-w-full mx-auto">
+          <div className="work-count mr-6">
+            <h3 className="text-3xl md:text-4xl xl:text-5xl text-[#aabdca] group-hover:text-white font-frank">01</h3>
+          </div>
+          <div className="work-content">
+            <h4 className="text-lg md:text-xl xl:text-2xl text-custom-color font-frank group-hover:text-white">Customize Your Survey</h4>
+            <p className="text-sm md:text-base text-custom-color font-poppins group-hover:text-white mt-2">Use our intuitive platform to create a survey tailored to your organization's needs.</p>
+          </div>
+        </div>
+        <div className="work-listing group flex flex-col md:flex-row py-5 px-6 rounded-[15px] bg-white hover:bg-custom-color transition duration-300 ease-in-out shadow-custom2 mb-6 max-w-full mx-auto">
+          <div className="work-count mr-6">
+            <h3 className="text-3xl md:text-4xl xl:text-5xl text-[#aabdca] group-hover:text-white font-frank">02</h3>
+          </div>
+          <div className="work-content">
+            <h4 className="text-lg md:text-xl xl:text-2xl text-custom-color font-frank group-hover:text-white">AI-Generated Questions</h4>
+            <p className="text-sm md:text-base text-custom-color font-poppins group-hover:text-white mt-2">Our AI analyzes your inputs and generates relevant, targeted questions.</p>
+          </div>
+        </div>
+        <div className="work-listing group flex flex-col md:flex-row py-5 px-6 rounded-[15px] bg-white hover:bg-custom-color transition duration-300 ease-in-out shadow-custom2 mb-6 max-w-full mx-auto">
+          <div className="work-count mr-6">
+            <h3 className="text-3xl md:text-4xl xl:text-5xl text-[#aabdca] group-hover:text-white font-frank">03</h3>
+          </div>
+          <div className="work-content">
+            <h4 className="text-lg md:text-xl xl:text-2xl text-custom-color font-frank group-hover:text-white">Collect Feedback</h4>
+            <p className="text-sm md:text-base text-custom-color font-poppins group-hover:text-white mt-2">Distribute the survey to your employees and collect their feedback easily and anonymously.</p>
+          </div>
+        </div>
+        <div className="work-listing group flex flex-col md:flex-row py-5 px-6 rounded-[15px] bg-white hover:bg-custom-color transition duration-300 ease-in-out shadow-custom2 mb-6 max-w-full mx-auto">
+          <div className="work-count mr-6">
+            <h3 className="text-3xl md:text-4xl xl:text-5xl text-[#aabdca] group-hover:text-white font-frank">04</h3>
+          </div>
+          <div className="work-content">
+            <h4 className="text-lg md:text-xl xl:text-2xl text-custom-color font-frank group-hover:text-white">AI-Generated Reports</h4>
+            <p className="text-sm md:text-base text-custom-color font-poppins group-hover:text-white mt-2">Receive detailed reports with actionable insights tailored to each employee.</p>
+          </div>
+        </div>
+        <div className="work-listing group flex flex-col md:flex-row py-5 px-6 rounded-[15px] bg-white hover:bg-custom-color transition duration-300 ease-in-out shadow-custom2 mb-6 max-w-full mx-auto">
+          <div className="work-count mr-6">
+            <h3 className="text-3xl md:text-4xl xl:text-5xl text-[#aabdca] group-hover:text-white font-frank">05</h3>
+          </div>
+          <div className="work-content">
+            <h4 className="text-lg md:text-xl xl:text-2xl text-custom-color font-frank group-hover:text-white">Continuous Improvement</h4>
+            <p className="text-sm md:text-base text-custom-color font-poppins group-hover:text-white mt-2">Use the insights to drive continuous improvement and enhance employee performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="banner-buttons mt-12 md:mt-16 flex flex-col md:flex-row justify-center gap-4">
+      <a href="javascript:;" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[212px] h-[46px] flex items-center justify-center leading-[46px] rounded-full font-poppins">Request a Demo</a>
+      <a href="javascript:;" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[212px] h-[46px] flex items-center justify-center leading-[46px] rounded-full font-poppins">Learn More</a>
+    </div>
+  </Container>
+</div>
+
 
     </>
   );
