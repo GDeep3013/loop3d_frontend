@@ -171,7 +171,7 @@ const Home: React.FC = () => {
         </p>
         <div className="work-img mb-8">
           <img
-            className="border-solid border-white border-[9px] rounded-[30px] shadow-custom-mobile xl:shadow-custom max-w-full mx-auto max-w-[500px] lg:max-w-auto"
+            className="border-solid border-white border-[9px] rounded-[30px] shadow-custom-mobile xl:shadow-custom lg:max-w-full mx-auto max-w-[80%] md:max-w-[500px] "
             src="/images/work.webp"
             alt="work image"
           />
@@ -227,8 +227,8 @@ const Home: React.FC = () => {
     </div>
 
     <div className="banner-buttons mt-12 md:mt-16 flex flex-col md:flex-row justify-center gap-4">
-      <a href="javascript:;" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[212px] h-[46px] flex items-center justify-center leading-[46px] rounded-full font-poppins">Request a Demo</a>
-      <a href="javascript:;" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[212px] h-[46px] flex items-center justify-center leading-[46px] rounded-full font-poppins">Learn More</a>
+      <a href="javascript:;" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[250px] h-[46px] flex items-center justify-center leading-[46px] rounded-full font-poppins m-auto lg:m-0">Request a Demo</a>
+      <a href="javascript:;" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[250px] h-[46px] flex items-center justify-center leading-[46px] rounded-full font-poppins m-auto lg:m-0">Learn More</a>
     </div>
   </Container>
 </div>

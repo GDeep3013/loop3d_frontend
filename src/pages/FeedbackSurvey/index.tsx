@@ -4,7 +4,7 @@ import Container from "../../components/common/Container";
 const RefundPolicy: React.FC = () => {
     return (
         <>
-            <div className="survey-inner pt-[120px] pb-[17rem] md:pb-[19rem] lg:pb-[20px]">
+            <div className="survey-inner pt-[120px] pb-[17rem] md:pb-[24rem] lg:pb-[20px]">
                 <Container>
                     <div className="survey-container p-[20px] max-w-[800px] m-auto rounded-lg shadow-custom3">
 

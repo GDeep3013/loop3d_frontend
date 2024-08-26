@@ -23,7 +23,9 @@ const Footer: React.FC = () => {
     }, 10);
   };
 
-  const location  = useLocation();
+  const location = useLocation();
+
+  const isActive = (path) => location.pathname.startsWith(path);
 
   const [email, setEmail] = useState<string>("");
   console.log(email);
@@ -38,9 +40,9 @@ const Footer: React.FC = () => {
   }, []);
 
 
-  const marginTop = (location.pathname == '/start-survey') ? 'mt-[38rem] md:mt-[41rem] lg:mt-[23rem]' : 'mt-[200px]';
+  const marginTop = (location.pathname == '/start-survey') ? 'mt-[31rem] md:mt-[41rem] lg:mt-[23rem]' : 'mt-[200px]';
   const disbleContent = (location.pathname == '/services') ? 'hidden' : '';
-  const marginBox = (location.pathname == '/about' || location.pathname === '/home' ) ? '!mt-[0]' : '';
+  const marginBox = (location.pathname == '/about' || location.pathname === '/home') ? '!mt-[0]' : '';
 
   return (
     <footer className="bg-[#174A6D] text-white font-poppins">
@@ -54,7 +56,7 @@ const Footer: React.FC = () => {
               <div className="flex flex-col lg:flex-row w-full justify-center xl:justify-around space-y-8 xl:space-x-8">
                 <div className="flex flex-col justify-center items-center">
                   <span className="text-[34px] md:text-[48px] font-frank">
-                  {feedbackSessions.toLocaleString()}k
+                    {feedbackSessions.toLocaleString()}k
                   </span>
                   <p className="w-[220px] mx-auto text-center text-[16px] frank-poppins">
                     Feedback sessions conducted worldwide
@@ -62,7 +64,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="flex flex-col justify-center items-center">
                   <span className="text-[34px] md:text-[48px] font-frank">
-                  +{leadershipImprovement}%
+                    +{leadershipImprovement}%
                   </span>
                   <p className="w-[220px] mx-auto text-center text-[16px] frank-poppins">
                     Improved leadership capabilities
@@ -70,7 +72,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="flex flex-col justify-center items-center">
                   <span className="text-[34px] md:text-[48px] font-frank">
-                  +{employeeRetention}%
+                    +{employeeRetention}%
                   </span>
                   <p className="w-[210px] mx-auto text-center text-[16px] frank-poppins">
                     Higher employee retention
@@ -84,18 +86,18 @@ const Footer: React.FC = () => {
       <Container className="py-14">
         {/* mobile display */}
         <div className="flex flex-col items-center xl:hidden pr-3 mb-3">
-            <img
-              className="h-[77px] mx-auto lg:mx-[0px]"
-              src="/images/header/logoheader.svg"
-              alt="Logo"
-            />
-            <p className="text-center text-[16px] mt-2 leading-[30px] md:w-[500px]">
-              We are dedicated to transforming the 360 feedback process using
-              AI-driven technology to provide personalized, actionable insights
-              for businesses of all sizes.
-            </p>
-          </div>
-          {/* mobile display end */}
+          <img
+            className="h-[77px] mx-auto lg:mx-[0px]"
+            src="/images/header/logoheader.svg"
+            alt="Logo"
+          />
+          <p className="text-center text-[16px] mt-2 leading-[30px] md:w-[500px]">
+            We are dedicated to transforming the 360 feedback process using
+            AI-driven technology to provide personalized, actionable insights
+            for businesses of all sizes.
+          </p>
+        </div>
+        {/* mobile display end */}
         <div className="grid grid-cols-1 lg:grid-cols-[26%,37%,37%] xl:grid-cols-[25%,20%,25%,30%]">
           <div className="hidden xl:block pr-3 text-center lg:text-left">
             <img
@@ -130,38 +132,57 @@ const Footer: React.FC = () => {
             <h4 className="text-[25px] font-frank mb-2">Useful Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/home" className="text-[16px] leading-[30px]">
+                <Link
+                  to="/home"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className={`text-[16px] leading-[30px] ${isActive('/home') ? 'text-custom-color2' : ''}`}
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-[16px] leading-[30px]">
+                <Link
+                  to="/about"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className={`text-[16px] leading-[30px] ${isActive('/about') ? 'text-custom-color2' : ''}`}
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-[16px] leading-[30px]">
+                <Link
+                  to="/services"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className={`text-[16px] leading-[30px] ${isActive('/services') ? 'text-custom-color2' : ''}`}
+                >
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-[16px] leading-[30px]">
+                <Link
+                  to="/contact"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className={`text-[16px] leading-[30px] ${isActive('/contact') ? 'text-custom-color2' : ''}`}
+                >
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-[16px] leading-[30px]">
-                  Contact Us
+                <Link
+                  to="/terms-of-service"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className={`text-[16px] leading-[30px] ${isActive('/terms-of-service') ? 'text-custom-color2' : ''}`}
+                >
+                  Terms of Service
                 </Link>
               </li>
               <li>
-                <Link to="/terms-of-service" className="text-[16px] leading-[30px]">
-                Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy-policy" className="text-[16px] leading-[30px]">
-                Privacy Policy
+                <Link
+                  to="/privacy-policy"
+                  onClick={() => window.scrollTo(0, 0)}
+                  className={`text-[16px] leading-[30px] ${isActive('/privacy-policy') ? 'text-custom-color2' : ''}`}
+                >
+                  Privacy Policy
                 </Link>
               </li>
             </ul>

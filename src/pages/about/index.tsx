@@ -61,7 +61,7 @@ const About: React.FC = () => {
                        <span className="w-[50px] h-[50px] rounded-full absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] t bg-custom-color hidden md:inline-block"></span>
                     </div>
 
-                    <div className="w-full max-w-[620px] relative m-auto md:m-0">
+                    <div className="w-full max-w-[620px] relative m-auto md:m-0 md:pt-[0] pt-12">
                        <div className="bg-white xl:py-[95px] xl:px-[70px] p-10 md:text-left text-center">
                         <h2 className="text-black xl:text-[48px] text-[25px] font-frank">Our Vision</h2>
                         <p className="xl:text-base text-sm leading-[26px] text-black font-poppins">To create a work environment where feedback is a powerful tool for growth and development.</p>
