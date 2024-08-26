@@ -120,7 +120,7 @@ const Header: React.FC = () => {
             ) : (
               <Link to="/home">
                 <img
-                  className="h-[36px]"
+                  className="h-[30px]"
                   src="/images/header/loop3d-logo.webp"
                   alt="Logo"
                 />
@@ -133,7 +133,7 @@ const Header: React.FC = () => {
             >
               <Link
                 to="/home"
-                onClick={() => window.scrollTo(0, 0)}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className={`relative inline-block mx-4 py-2 lg:py-0 text-[16px] font-poppins
     ${isActive('/home') ? (isScrolled ? 'text-custom-color after:scale-x-100 after:bg-[#174a6d]' : 'text-white after:scale-x-100 after:bg-white') : (isScrolled ? 'text-custom-color' : 'text-white')}
     hover:text-custom-color group-hover:text-custom-color after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-[#7ABCDB] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 after:ease-[cubic-bezier(.58,.3,.005,1)] hover:after:scale-x-100 max-[991px]:w-full max-[991px]:ml-[32px]`}
@@ -142,7 +142,7 @@ const Header: React.FC = () => {
               </Link>
               <Link
                 to="/about"
-                onClick={() => window.scrollTo(0, 0)}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className={`relative inline-block mx-4 py-2 lg:py-0 text-[16px] font-poppins
                   ${isActive('/about') ? (isScrolled ? 'text-custom-color after:scale-x-100 after:bg-[#174a6d]' : 'text-white after:scale-x-100 after:bg-white') : (isScrolled ? 'text-custom-color' : 'text-white')}
                   hover:text-custom-color group-hover:text-custom-color after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-[#7ABCDB] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 after:ease-[cubic-bezier(.58,.3,.005,1)] hover:after:scale-x-100 max-[991px]:w-full max-[991px]:ml-[32px]`}
@@ -151,7 +151,7 @@ const Header: React.FC = () => {
               </Link>
               <Link
                 to="/services"
-                onClick={() => window.scrollTo(0, 0)}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className={`relative inline-block mx-4 py-2 lg:py-0 text-[16px] font-poppins
                   ${isActive('/services') ? (isScrolled ? 'text-custom-color after:scale-x-100 after:bg-[#174a6d]' : 'text-white after:scale-x-100 after:bg-white') : (isScrolled ? 'text-custom-color' : 'text-white')}
                   hover:text-custom-color group-hover:text-custom-color after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-[#7ABCDB] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 after:ease-[cubic-bezier(.58,.3,.005,1)] hover:after:scale-x-100 max-[991px]:w-full max-[991px]:ml-[32px]`}
@@ -160,7 +160,7 @@ const Header: React.FC = () => {
               </Link>
               <Link
                 to="/contact"
-                onClick={() => window.scrollTo(0, 0)}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className={`relative inline-block mx-4 py-2 lg:py-0 text-[16px] font-poppins
                   ${isActive('/contact') ? (isScrolled ? 'text-custom-color after:scale-x-100 after:bg-[#174a6d]' : 'text-white after:scale-x-100 after:bg-white') : (isScrolled ? 'text-custom-color' : 'text-white')}
                   hover:text-custom-color group-hover:text-custom-color after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[1px] after:bg-[#7ABCDB] after:scale-x-0 after:origin-center after:transition-transform after:duration-300 after:ease-[cubic-bezier(.58,.3,.005,1)] hover:after:scale-x-100 max-[991px]:w-full max-[991px]:ml-[32px]`}

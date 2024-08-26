@@ -11,7 +11,7 @@ const RefundPolicy: React.FC = () => {
                         <h2 className="text-black text-2xl md:text-3xl font-frank text-center">
                             360 Feedback Survey
                         </h2>
-                        <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed sm:leading-relaxed md:leading-loose lg:leading-loose text-gray-600 font-poppins mt-4">
+                        <p className="text-sm sm:text-base leading-relaxed text-gray-600 font-poppins mt-4">
                             You have been selected as a rater to provide insights into Gurdeep's performance on the survey items below. The purpose is to measure how often you notice these behaviors demonstrated by Gurdeep in the workplace. Answer each item below thinking about how often Gurdeep exhibits that specific behavior. Your responses are anonymous and we appreciate your input!
                         </p>
 

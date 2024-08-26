@@ -134,7 +134,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/home"
-                  onClick={() => window.scrollTo(0, 0)}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className={`text-[16px] leading-[30px] ${isActive('/home') ? 'text-custom-color2' : ''}`}
                 >
                   Home
@@ -143,7 +143,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/about"
-                  onClick={() => window.scrollTo(0, 0)}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className={`text-[16px] leading-[30px] ${isActive('/about') ? 'text-custom-color2' : ''}`}
                 >
                   About Us
@@ -152,7 +152,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/services"
-                  onClick={() => window.scrollTo(0, 0)}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className={`text-[16px] leading-[30px] ${isActive('/services') ? 'text-custom-color2' : ''}`}
                 >
                   Services
@@ -161,7 +161,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/contact"
-                  onClick={() => window.scrollTo(0, 0)}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className={`text-[16px] leading-[30px] ${isActive('/contact') ? 'text-custom-color2' : ''}`}
                 >
                   Contact Us
@@ -170,7 +170,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/terms-of-service"
-                  onClick={() => window.scrollTo(0, 0)}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className={`text-[16px] leading-[30px] ${isActive('/terms-of-service') ? 'text-custom-color2' : ''}`}
                 >
                   Terms of Service
@@ -179,7 +179,7 @@ const Footer: React.FC = () => {
               <li>
                 <Link
                   to="/privacy-policy"
-                  onClick={() => window.scrollTo(0, 0)}
+                  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                   className={`text-[16px] leading-[30px] ${isActive('/privacy-policy') ? 'text-custom-color2' : ''}`}
                 >
                   Privacy Policy
@@ -264,7 +264,7 @@ const Footer: React.FC = () => {
               Copyright © 2024 Loop3D
             </p>
             <div className="flex space-x-5">
-              <Link className="frank-poppins" to="/refund-policy">
+              <Link className="frank-poppins" to="/refund-policy"  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                 <p className="text-[16px] frank-poppins leading-[30px]">
                   Refund Policy
                 </p>

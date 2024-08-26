@@ -18,7 +18,7 @@ const Services: React.FC = () => {
                             <li className="text-base list-disc leading-[26px] text-white font-poppins mt-2"> Build a High Performing Organization </li>
                         </ul>
                         <p className="text-base leading-[26px] text-white font-poppins mt-3">Click on the link below for us to better understand your needs and walk through a demo of the Looped 360 Feedback process.</p>
-                        <a href="javascript:;" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[250px] min-h-[56px] leading-[56px] inline-block text-center rounded-[50px] font-poppins mt-[38px]">Request a Demo</a>
+                        <a href="/contact" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[250px] min-h-[56px] leading-[56px] inline-block text-center rounded-[50px] font-poppins mt-[38px]">Request a Demo</a>
                     </div>
 
                 </Container>
@@ -117,7 +117,7 @@ const Services: React.FC = () => {
                 <div className="">
                     <h2 className="text-white lg:text-[48px] text-3xl font-frank">Ready to learn more?</h2>
                     <p className="text-base leading-[26px] mt-3 text-white font-poppins">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <a href="javascript:;" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[250px] min-h-[56px] leading-[56px] inline-block text-center rounded-[50px] font-poppins mt-[38px]">Request a Demo</a>
+                    <a href="/contact" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[250px] min-h-[56px] leading-[56px] inline-block text-center rounded-[50px] font-poppins mt-[38px]">Request a Demo</a>
                 </div>
               </Container>
             </div>

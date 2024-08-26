@@ -49,13 +49,13 @@ const Home: React.FC = () => {
           </h1>
           <div className="banner-buttons mt-8 flex flex-col gap-4 items-center xl:flex-row xl:gap-8 xl:justify-start xl:mt-12">
             <a
-              href="javascript:;"
+              href="/contact"
               className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[212px] h-[56px] flex items-center justify-center leading-[56px] rounded-full font-poppins"
             >
               Request a Demo
             </a>
             <a
-              href="javascript:;"
+              href="/services"
               className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[212px] h-[56px] flex items-center justify-center leading-[56px] rounded-full font-poppins"
             >
               Learn More
@@ -105,7 +105,7 @@ const Home: React.FC = () => {
       <div className="building-peak py-12 min-[1025px]:py-[80px] bg-[#f5f5f5] max-[1024px]:overflow-hidden">
         <Container>
 
-          <div className="building-peak-heading text-center">
+          <div className="building-peak-heading text-center mb-4 md:mb-8">
             <h2 className="text-[#174a6d] text-3xl min-[1025px]:text-[48px] font-frank">Building peak performance cultures at top organizations</h2>
           </div>
 

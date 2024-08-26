@@ -95,8 +95,8 @@ const StartSurvey: React.FC = () => {
     return (
       <Container className="my-[10rem]">
         <div className="lg:w-[1080px] mx-auto bg-white rounded-[20px] p-[20px] md:p-[40px]" style={{ boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.15)" }}>
-          <h1 className="text-[38px] md:text-[48px] mb-6 text-center font-frank">Thank You!</h1>
-          <p className="text-center text-[16px]">Your registration is successfull.</p>
+          <h1 className="text-[38px] md:text-[48px] mb-5 text-center font-frank">Thank You!</h1>
+          <p className="text-center text-[16px] font-poppins">Your registration is successfull.</p>
         </div>
       </Container>
     );
@@ -140,7 +140,7 @@ const StartSurvey: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <button
                 type="button"
-                className={`min-w-[218px] px-[20px] py-[15px] rounded-full font-normal ${
+                className={`min-w-[218px] px-[20px] py-[15px] rounded-full font-normal font-poppins ${
                   activeTab === "individual_contributor"
                     ? "bg-[#174A6D] text-white"
                     : "bg-white text-[#174A6D] border border-[#174A6D]"
@@ -151,7 +151,7 @@ const StartSurvey: React.FC = () => {
               </button>
               <button
                 type="button"
-                className={`min-w-[218px] px-[20px] py-[15px] rounded-full font-normal ${
+                className={`min-w-[218px] px-[20px] py-[15px] rounded-full font-normal font-poppins ${
                   activeTab === "people_manager"
                     ? "bg-[#174A6D] text-white"
                     : "bg-white text-[#174A6D] border border-[#174A6D]"
@@ -177,7 +177,7 @@ const StartSurvey: React.FC = () => {
                           selectedCheckboxes.length >= 3
                         }
                       />
-                      <span className="ml-3 text-black">{option}</span>
+                      <span className="ml-3 text-black font-poppins">{option}</span>
                     </label>
                   </li>
                 ))}
@@ -187,7 +187,7 @@ const StartSurvey: React.FC = () => {
           <div className="mt-2">
             <button
               type="submit"
-              className="min-w-[218px] px-[20px] py-[15px] bg-[#7ABCDB] flex justify-center text-[16px] rounded-full text-white"
+              className="min-w-[218px] px-[20px] py-[15px] bg-[#7ABCDB] flex justify-center text-[16px] rounded-full text-white font-poppins"
             >
               Submit
             </button>
