@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
 
   const marginTop = (location.pathname == '/start-survey') ? 'mt-[31rem] md:mt-[41rem] lg:mt-[23rem]' : 'mt-[200px]';
   const disbleContent = (location.pathname == '/services') ? 'hidden' : '';
-  const marginBox = (location.pathname == '/about' || location.pathname === '/home') ? '!mt-[0]' : '';
+  const marginBox = (location.pathname == '/about' || location.pathname === '/home' || location.pathname === '/lead-dashboard') ? '!mt-[0]' : '';
 
   return (
     <footer className="bg-[#174A6D] text-white font-poppins">

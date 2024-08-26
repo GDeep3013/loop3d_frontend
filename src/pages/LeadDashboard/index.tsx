@@ -63,10 +63,12 @@ const LeadDashboard: React.FC = () => {
                     </Container>
                 </div>
 
-                <div className="step2 py-10 md:py-[80px] mb-[30rem] md:mb-[37rem] lg:mb-[16rem] 2xl:mb-0 bg-custom-color2">
+                <div className="step2 py-10 md:py-[80px] mb-[30rem] md:mb-[37rem] lg:mb-[16rem] bg-custom-color2">
                     <Container>
-                        <form method="post">
-                            <div className="participant bg-custom-color py-6 md:py-[35px] px-4 md:px-[15px] rounded-t-2xl flex flex-wrap md:flex-nowrap">
+                        <h2 className="text-white text-3xl lg:text-4xl font-frank">Step 2:</h2>
+                        <p className="text-white font-poppins mt-3">Enter a minimum of 10 participants whom you would like to invite to take your 360 survey.</p>
+                        <form method="post" className="mt-8">
+                            <div className="participant bg-custom-color py-6 md:py-[35px] px-4 md:px-[15px] rounded-t-2xl flex-wrap md:flex-nowrap hidden md:flex">
                                 <div className="form-group w-full text-center">
                                     <label className="participant-head text-[19px] xl:text-[27px] text-white font-frank">Participant :</label>
                                 </div>
