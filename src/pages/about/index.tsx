@@ -25,7 +25,7 @@ const About: React.FC = () => {
                     <div className="lg:flex items-center">
                         <div className="lg:w-1/2 w-full pr-[85px] text-center lg:text-left max-[1023px]:pr-0">
                           <h2 className="text-black xl:text-[48px] text-3xl font-frank">About Us</h2>
-                          <p className="text-base leading-[26px] text-black font-poppins lg:mt-0 mt-2">We are dedicated to transforming the 360 feedback process using AI-driven technology to provide personalized, actionable insights for businesses of all sizes. Not only does AI help generate personalized reports almost instantaneously, but we also utilize the essence of artificial intelligence to create ongoing feedback loops with the ongoing feedback from each individual survey. That means the our AI will learn more and more about each employee after each iteration, being able to provide better and better customized feedback each time.</p>
+                          <p className="text-base leading-[26px] text-black font-poppins mt-3">We are dedicated to transforming the 360 feedback process using AI-driven technology to provide personalized, actionable insights for businesses of all sizes. Not only does AI help generate personalized reports almost instantaneously, but we also utilize the essence of artificial intelligence to create ongoing feedback loops with the ongoing feedback from each individual survey. That means the our AI will learn more and more about each employee after each iteration, being able to provide better and better customized feedback each time.</p>
                         </div>
                         <div className="lg:w-1/2 w-full lg:mt-0 mt-5">
                           <img src="/images/about.webp" alt="about us"/>
