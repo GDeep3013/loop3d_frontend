@@ -16,6 +16,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RefundPolicy from "./pages/RefundPolicy";
 import LeadDashboard from "./pages/LeadDashboard";
 import FeedbackSurvey from "./pages/FeedbackSurvey";
+import SurveySummary from "./pages/SurveySummary";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/lead-dashboard" element={<LeadDashboard />} />
           <Route path="/feedback-survey" element={<FeedbackSurvey />} />
+          <Route path="/survey-summary" element={<SurveySummary />} />
           <Route path="/login" element={<AdminLogin />} />
           <Route path="/start-survey" element={<StartSurvey />} />
           <Route path="*" element={<Navigate to="/home" />} />

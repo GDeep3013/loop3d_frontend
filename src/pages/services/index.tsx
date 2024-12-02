@@ -116,7 +116,7 @@ const Services: React.FC = () => {
               <Container>
                 <div className="">
                     <h2 className="text-white lg:text-[48px] text-3xl font-frank">Ready to learn more?</h2>
-                    <p className="text-base leading-[26px] mt-3 text-white font-poppins">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <p className="text-base leading-[26px] mt-3 text-white font-poppins">Schedule a free demo call with us so we can show you exactly how we can help you and your organization.</p>
                     <a href="/contact" className="bg-[#7abcdb] hover:bg-[#174a6d] text-white min-w-[250px] min-h-[56px] leading-[56px] inline-block text-center rounded-[50px] font-poppins mt-[38px]">Request a Demo</a>
                 </div>
               </Container>
