@@ -118,7 +118,7 @@ const StartSurvey: React.FC = () => {
                 name="loop_lead_name"
                 value={formData.loop_lead_name}
                 onChange={handleInputChange}
-                placeholder="Looped Lead Name"
+                placeholder="Loop3D Lead Name"
               />
             </div>
             <div className="w-[50%]">
@@ -130,7 +130,7 @@ const StartSurvey: React.FC = () => {
                 name="loop_lead_email"
                 value={formData.loop_lead_email}
                 onChange={handleInputChange}
-                placeholder="Looped Lead Email"
+                placeholder="Loop3D Lead Email"
               />
             </div>
           </div>
