@@ -45,9 +45,11 @@ const LeadDashboard: React.FC = () => {
 
                                 <form method="post" className="mt-4 lg:mt-[20px]">
                                     <div className="form-group">
+                                        <label className="mb-3 text-lg font-frank">Your Email Address</label>
                                         <input placeholder="First Name" type="email" name="employee_email" value="demo123@gmail.com" disabled required className="w-full border border-custom-color2 leading-[48px] rounded px-[14px] focus:outline-[2px] outline-custom-color2 text-base font-poppins bg-[#F2F8FB]" />
                                     </div>
                                     <div className="form-group mt-[20px]">
+                                        <label className="mb-3 text-lg font-frank">Manager's Email</label>
                                         <input placeholder="First Name" type="email" name="employee_email" value="demo321lab@gmail.com" disabled required className="w-full bg-[#F2F8FB] border border-custom-color2 leading-[48px] rounded px-[14px] focus:outline-[2px] outline-custom-color2 text-base font-poppins" />
                                     </div>
                                 </form>

@@ -8,9 +8,10 @@ const Services: React.FC = () => {
 
     return (
         <>
-            <div className="about-banner bg-[url('/images/service-banner.webp')] bg-cover bg-repeat lg:h-custom-height lg:min-h-auto min-h-[600px] flex items-center md:bg-left bg-center lg:pt-0 pt-16">
+            <div className="about-banner bg-[url('/images/service-banner.webp')] bg-cover bg-repeat lg:h-custom-height lg:min-h-auto min-h-[600px] flex items-center md:bg-left bg-center lg:pt-0 pt-16 relative">
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
                 <Container>
-                    <div className="about-text text-left max-w-[400px] lg:max-w-[550px] xl:max-w-[720px] ml-[auto]">
+                    <div className="about-text text-left max-w-[400px] lg:max-w-[550px] xl:max-w-[720px] ml-[auto] z-[1] relative">
                         <h1 className="xl:text-[70px] text-white font-frank text-4xl">Why LOOP3D?</h1>
                         <ul className="pl-[18px] mt-5">
                             <li className="text-base list-disc leading-[26px] text-white font-poppins"> Enhance Employee Performance </li>
